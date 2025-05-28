@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"  # à adapter si vos dépendances sont ailleurs
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps"
+    open-pull-requests-limit: 5
+    rebase-strategy: auto
+    groups:
+      security-updates:
+        patterns:
+          - "*"
